@@ -10,4 +10,4 @@ To activate the environment:
 ``conda activate scholarly_project``
 
 To ensure that packages can be installed from the `requirements.txt` file, run the following command:
-``conda install pip``
+``conda install --file requirements.txt``
