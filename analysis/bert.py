@@ -9,7 +9,6 @@ model = SentenceTransformer("distilbert-base-uncased-finetuned-sst-2-english")
 # Read in the data.
 tweets = pd.read_pickle("../data/3_9_tweets.pkl")
 tweets["embedding"] = pd.NA
-tweets = tweets.iloc[0:6000, :]
 
 
 # BERT, in chunks.
@@ -47,4 +46,4 @@ for file_name in glob.glob("../data/embedded/*.pkl"):
 
 # Concat, write the data.
 stitched_data = pd.concat(read_files, axis=0)
-stitched_data.to_pickle("../data/3_23_bert_data_test.pkl")
+stitched_data.to_pickle("../data/3_24_bert_data.pkl")
